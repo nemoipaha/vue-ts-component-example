@@ -8,19 +8,17 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import {Component, Prop} from "vue-property-decorator";
+import { Prop } from "vue-property-decorator";
 import Component from 'vue-class-component';
 
 @Component({
     name: 'HelloComponent',
-    props: {
-        msg: String,
-        initialEnthusiasm: Number
-    },
 })
 export default class Hello extends Vue {
+    @Prop()
     msg: string
 
+    @Prop()
     initialEnthusiasm: number
 
     enthusiasm = this.initialEnthusiasm
